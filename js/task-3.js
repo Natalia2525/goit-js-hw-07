@@ -17,3 +17,16 @@ const images = [
 ];
 
 const galleryRef = document.querySelector(`#gallery`);
+
+const img = ({url, alt}) => {
+    return `<li class="list-item"><img src = '${url}' alt = '${alt}'></li>`
+};
+
+function getList(arr) {
+  const list = `${arr.map(item => img(item)).join('')}`;
+
+  return list;
+};
+
+galleryRef.insertAdjacentHTML('beforeend', getList(images));
+
