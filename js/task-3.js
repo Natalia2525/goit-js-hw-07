@@ -30,3 +30,5 @@ function getList(arr) {
 
 galleryRef.insertAdjacentHTML('beforeend', getList(images));
 
+
+
